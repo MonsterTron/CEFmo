@@ -173,10 +173,10 @@ code {
 }
 
 .btn {
-	box-shadow: 0 0 4px 4px maroon;
+	box-shadow: 0 0 10px 4px #47ff4d;
 	border: 8px solid;
 	border-image: url("img/border_2.png") 16 round;
-	background-color: #bb2929;
+	background-color: #ad25daa1;
 }
 
 .btn:hover{
