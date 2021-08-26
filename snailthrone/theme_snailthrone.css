@@ -95,7 +95,7 @@ body:before {
 }
 
 .pot {
-	text-shadow: 0 0 20px red, 0 0 30px red, 0 0 40px red, 2px 2px 2px red;
+	text-shadow: 0 0 40px #7a00ff, 0 0 30px #f70909, 0 0 40px red, 3px 3px 3px red;
 }
 
 .glow {
