@@ -225,7 +225,7 @@ function formatEthValue2(ethstr){
 //Truncates ETH address to first 8 numbers
 function formatEthAdr(adr){
 	var _smallAdr = adr.substring(0, 10);
-	var _stringLink = '<a href="https://etherscan.io/address/' + adr + '" target="_blank">' + _smallAdr + '</a>';
+	var _stringLink = '<a href="https://bscscan.com//address/' + adr + '" target="_blank">' + _smallAdr + '</a>';
 	return _stringLink;
 }
 
@@ -352,9 +352,9 @@ function updatePharaoh(){
 		}
 		else {
 			if(b_pharaoh === m_account) {
-				pharaohdoc.innerHTML = "YOU ARE THE SNAILGOD!<br>Claim your winnings by starting a new round.";
+				pharaohdoc.innerHTML = "YOU ARE THE FOMOGOD!<br>Claim your winnings by starting a new round.";
 			} else {
-			pharaohdoc.innerHTML = b_pharaoh + " is the SnailGod!<br>Start a new round to be next in line!";
+			pharaohdoc.innerHTML = b_pharaoh + " is the FomoGod!<br>Start a new round to be next in line!";
 			}
 		}
 	});
@@ -1422,7 +1422,7 @@ function runLog(){
 
 						} else if(result[i].event == "Ascended"){
 							var _roundwon = result[i].args.round - 1;
-							eventdoc.innerHTML += "<br>[~" + datetext + "] " + formatEthAdr(result[i].args.player) + " ASCENDS!<br>The new SnailGod wins Round " + _roundwon + " and claims " + formatEthValue2(web3.fromWei(result[i].args.ethreward,'ether')) + " ETH." ;
+							eventdoc.innerHTML += "<br>[~" + datetext + "] " + formatEthAdr(result[i].args.player) + " ASCENDS!<br>The new FOMOGod wins Round " + _roundwon + " and claims " + formatEthValue2(web3.fromWei(result[i].args.ethreward,'ether')) + " ETH." ;
 
 						} else if(result[i].event == "NewDivs"){
 							eventdoc.innerHTML += "<br>[~" + datetext + "] Another snail game just paid out " + formatEthValue2(web3.fromWei(result[i].args.ethreward,'ether')) + " ETH in divs to all holders!" ;
@@ -1540,7 +1540,7 @@ ascendedEvent.watch(function(error, result){
 		if(checkHash(result.transactionHash, result.event) != 0) {
 			date24();
 			var _roundwon = result.args.round - 1;
-			eventdoc.innerHTML += "<br>[" + datetext + "] " + formatEthAdr(result.args.player) + " ASCENDS!<br>The new SnailGod wins Round " + _roundwon + " and claims " + formatEthValue2(web3.fromWei(result.args.ethreward,'ether')) + " ETH." ;
+			eventdoc.innerHTML += "<br>[" + datetext + "] " + formatEthAdr(result.args.player) + " ASCENDS!<br>The new FomoGod wins Round " + _roundwon + " and claims " + formatEthValue2(web3.fromWei(result.args.ethreward,'ether')) + " ETH." ;
 			logboxscroll.scrollTop = logboxscroll.scrollHeight;
 		}
 	}
