@@ -578,11 +578,11 @@ function updatePlayerEarning(){
 
 //Status of referral link for player
 function updatePlayerRef(){
-	if(a_playerSnail >= 300){
+	if(a_playerSnail >= 100){
 		a_refLink = window.location.protocol + '//' + window.location.host + window.location.pathname + "?ref=" + web3.eth.accounts[0];
 		playerreflinkdoc.innerHTML = "<br>" + a_refLink;
 	} else {
-		playerreflinkdoc.textContent = "Reach 300 snails to unlock.";
+		playerreflinkdoc.textContent = "Reach 100 FOMO to unlock.";
 	}
 }
 
